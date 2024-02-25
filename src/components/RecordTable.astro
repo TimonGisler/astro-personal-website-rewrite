@@ -1,0 +1,15 @@
+---
+
+const { recordToDisplay } = Astro.props;
+
+---
+
+<table>
+    <!-- Personalien is a record eg. name: myName etc. -->
+    {Object.entries(recordToDisplay).map(([key, value]) => (
+        <tr>
+            <td class="w-52">{key}:</td>
+            <td>{value}</td>
+        </tr>
+    ))}
+</table>

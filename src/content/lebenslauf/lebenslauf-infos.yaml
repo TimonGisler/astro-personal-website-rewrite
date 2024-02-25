@@ -1,0 +1,37 @@
+img: /lebenslauf-image.png
+
+Personalien:
+  Name: Timon Gisler
+  Geburtsdatum: 10.07.2001
+  Adresse: Hubelstrasse 20
+  Wohnort: 5524 Niederwil
+  Mobiltelefon: 079 936 82 45
+  E-Mail: timongisler@outlook.com
+  Nationalität: Schweiz
+
+Sprachen:
+  Deutsch: Muttersprache
+  Englisch: Sehr gut (C1+)
+
+IT-Kentnisse:
+  - Java
+  - Sql, PostgreSQL
+  - Svelte
+  - JUnit
+  - JavaScript/TypeScript
+  - Git
+
+Arbeitserfahrung:
+  Aug 2022 - jetzt: Software Engineer bei Bertschi
+  Aug 2021 - Aug 2022: Praktikum als Software Engineer bei Bertschi
+
+Ausbildung:
+  Feb 2023 - jetzt: Bachelor of Science in Computer Science FHNW
+  Sep 2018 - Jul 2021: Informatikmittelschule Kantonsschule Baden
+  Aug 2017 - Jul 2018: Bezirksschule Schule Wohlen
+
+Hobbys:
+  - Schach
+  - Lesen
+  - Programmieren
+  - Wandern
