@@ -3,11 +3,10 @@
 ---
 
 <nav id="navbar"
-    class="darkTODOTGIS:bg-neutral-900 bg-white fixed md:sticky md:top-0 h-screen w-52 md:w-auto transition-all md:transform-none -translate-x-full z-40">
+    class=" bg-white darkTODOTGIS:bg-neutral-900 fixed md:sticky md:top-0 h-screen w-52 md:w-auto transition-all md:transform-none -translate-x-full z-40">
     <!-- open/close menu button -->
     <button type="button" id="sidebarButton" aria-label="zeige oder verstecke die navigationsbar"
-        class="md:hidden absolute items-center p-2 rounded-r-md text-gray-400 hover:bg-gray-300 left-full top-[10%] dark:bg-neutral-900 bg-white md"
-        onclick="invertVisibilityOfSidebar()">
+        class="md:hidden absolute items-center p-2 rounded-r-md text-gray-400 hover:bg-gray-300 left-full top-[10%] darkTODOTGIS:bg-neutral-900 bg-white">
         <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20">
             <path
                 d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" />
@@ -29,14 +28,14 @@
         <!-- 
         {% for navbarLink in site.data.navbar.links %}
         <li
-            class="hover:bg-blue-100 dark:hover:bg-blue-900 cursor-pointer h-12 flex items-center pl-4 hover:border-l-4 border-b border-blue-700">
+            class="hover:bg-blue-100 darkTODOTGIS:hover:bg-blue-900 cursor-pointer h-12 flex items-center pl-4 hover:border-l-4 border-b border-blue-700">
             <a class="h-full w-full flex items-center" href= {{ '#' | append: navbarLink.link | replace: ' ', '-'}}>{{navbarLink.name}}</a>
         </li>
         {% endfor %}
         -->
 
         <li
-        class="hover:bg-blue-100 dark:hover:bg-blue-900 cursor-pointer h-12 flex items-center pl-4 hover:border-l-4 border-b border-blue-700">
+        class="hover:bg-blue-100 darkTODOTGIS:hover:bg-blue-900 cursor-pointer h-12 flex items-center pl-4 hover:border-l-4 border-b border-blue-700">
         <a class="h-full w-full flex items-center" href="TODO TGIS">TODO TGIS</a>
     </li>
     </ol>
