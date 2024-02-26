@@ -10,6 +10,7 @@ import Navbar from '../components/portfolio/Navbar.astro'
     
     
     <!--   about me  -->
+    <!--  ================ -->
     <section class="w-full flex flex-col items-center gap-6 ">
         <!-- Avatar -->
         <img id="avatar" class="block w-36 h-36 rounded-full object-cover"
@@ -39,8 +40,71 @@ import Navbar from '../components/portfolio/Navbar.astro'
                     TODO TGIS
                 </p>
             </div>
-    
         </div>
+
+
+        <!--  Projekte  -->
+        <!--  ================ -->
+        <section class="w-full flex flex-col items-center gap-6">
+            TODO TGIS PROJEKT
+            <!--
+            {% include sectionTitle.html title="Projekte" %}
+        
+            <div id="posts" class="flex flex-wrap justify-center w-4/5 gap-12">
+        
+        
+                {% for post in site.posts %}
+                    {% assign project_detail_id = post.title %}
+                    {% include projectCard.html project_detail_id=project_detail_id date=post.date title=post.title text=post.content image_url=post.card_image_url image_alt=post.card_image_alt tags=post.tags github_link=post.github_link demo_link=post.demo_link%}
+                    {% include project_detail.html id=project_detail_id title=post.title text=post.content %}
+                {% endfor %}
+        
+        
+            </div>
+             -->
+        </section>
+
+
+        <!--  Ausbildung  -->
+        <!--  ================ -->
+        <section class="w-full flex flex-col items-center gap-6">
+            TODO TGIS Ausbildung
+            <!--{% include sectionTitle.html title="Ausbildung" %} -->
+            <!-- timeline -->
+            <!--
+            <div class="px-4 space-y-6">
+                <div
+                    class="space-y-12 relative px-4 before:absolute before:top-2 before:bottom-0 before:w-0.5 before:-left-3 before:bg-gray-700">
+            -->
+                    <!-- Cards -->
+                    <!--
+                    {%- for education in site.data.educations -%}
+                        {% include timelineCard.html time=education.time what_i_did=education.what_i_did text=education.text %}
+                    {%- endfor -%}
+                </div>
+            </div>
+        -->
+        </section>
+
+
+        
+        <!--  Kontaktdaten  -->
+        <!--  ================ -->
+        <section class="w-full flex flex-col items-center gap-6">
+            TODO TGIS Kontaktdaten
+            <!--
+            {% include sectionTitle.html title="Kontaktdaten" %}
+        
+        
+            <ul class="flex gap-8 flex-wrap justify-center">
+                {% for contact in site.data.contacts %}
+                {% include contact.html card_link=contact.card_link image_url=contact.image_url alt_image_description=contact.alt_image_description
+                value=contact.value%}
+                {% endfor %}
+            </ul>
+            -->
+        </section>
+
     </section>
     
 </body>
