@@ -1,0 +1,52 @@
+---
+import { getCollection, getEntry } from 'astro:content';
+import Cvsection from '../components/Cvsection.astro'
+import RecordTable from '../components/RecordTable.astro'
+import List from '../components/List.astro'
+
+const lebenslauf = await getEntry('lebenslauf', 'lebenslauf-infos');
+
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body class="bg-gray-500 min-h-screen flex justify-center font-serif">
+		<div id="lebenslauf" class="w-[21cm] h-[297mm] bg-white  min-h-screen p-[2cm] text-[12pt] relative">
+			
+			<h1 class="text-[20pt] border-b border-black w-full">Lebenslauf</h1>
+
+			<img src={lebenslauf.data.img} alt="Bild"  class="absolute w-1/5 top-[40mm] right-[20mm]"/>
+
+			<Cvsection title="Personalien">
+				<RecordTable recordToDisplay={lebenslauf.data.Personalien} />
+			</Cvsection>
+
+			<Cvsection title="Sprachen">
+				<RecordTable recordToDisplay={lebenslauf.data.Sprachen} />
+			</Cvsection>
+
+			<Cvsection title="IT-Kentnisse">
+				<List listToDisplay={lebenslauf.data['IT-Kentnisse']} />
+			</Cvsection>
+
+			<Cvsection title="Arbeitserfahrung">
+				<RecordTable recordToDisplay={lebenslauf.data.Arbeitserfahrung} />
+			</Cvsection>
+
+			<Cvsection title="Ausbildung">
+				<RecordTable recordToDisplay={lebenslauf.data.Ausbildung} />
+			</Cvsection>
+
+			<Cvsection title="Hobbys">
+				<List listToDisplay={lebenslauf.data.Hobbys} />
+			</Cvsection>
+
+		</div>
+	</body>
+</html>
