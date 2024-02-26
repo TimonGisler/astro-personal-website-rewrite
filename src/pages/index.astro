@@ -1,5 +1,6 @@
 ---
 import Navbar from '../components/portfolio/Navbar.astro'
+import SectionTitle from '../components/portfolio/SectionTitle.astro'
 
 
 ---
@@ -11,7 +12,7 @@ import Navbar from '../components/portfolio/Navbar.astro'
     
     <!--   about me  -->
     <!--  ================ -->
-    <section class="w-full flex flex-col items-center gap-6 ">
+    <section class="w-full flex flex-col items-center gap-6 bg-gray-600">
         <!-- Avatar -->
         <img id="avatar" class="block w-36 h-36 rounded-full object-cover"
         src="https://dub.sh/TH11c0k"
@@ -21,7 +22,7 @@ import Navbar from '../components/portfolio/Navbar.astro'
         <h1 class="text-xl">Über mich</h1>
     
         <!-- Card -->
-        <div class="card max-w-2xl grid md:grid-cols-2 gap-4 w-full">
+        <div class="card max-w-2xl grid md:grid-cols-2 gap-4 w-full bg-green-600">
     
             <div id="info-list" class="border-b-2 border-blue-700 pb-4 md:border-b-0 md:border-r-2">
                 <ul class="grid gap-x-5 gap-y-3 grid-cols-[min-content_1fr]">
@@ -37,7 +38,8 @@ import Navbar from '../components/portfolio/Navbar.astro'
             <div id="text-box">
                 <p>
                     <!--{{site.data.infoAboutMe.aboutMeText}}-->
-                    TODO TGIS
+                    TODO TGIS about me text, some very
+                    Bla bla bla bla bla
                 </p>
             </div>
         </div>
@@ -46,7 +48,10 @@ import Navbar from '../components/portfolio/Navbar.astro'
         <!--  Projekte  -->
         <!--  ================ -->
         <section class="w-full flex flex-col items-center gap-6">
+            <SectionTitle title="Projekte" />
+
             TODO TGIS PROJEKT
+
             <!--
             {% include sectionTitle.html title="Projekte" %}
         
@@ -59,7 +64,6 @@ import Navbar from '../components/portfolio/Navbar.astro'
                     {% include project_detail.html id=project_detail_id title=post.title text=post.content %}
                 {% endfor %}
         
-        
             </div>
              -->
         </section>
@@ -68,6 +72,8 @@ import Navbar from '../components/portfolio/Navbar.astro'
         <!--  Ausbildung  -->
         <!--  ================ -->
         <section class="w-full flex flex-col items-center gap-6">
+            <SectionTitle title="Ausbildung" />
+
             TODO TGIS Ausbildung
             <!--{% include sectionTitle.html title="Ausbildung" %} -->
             <!-- timeline -->
@@ -91,6 +97,7 @@ import Navbar from '../components/portfolio/Navbar.astro'
         <!--  Kontaktdaten  -->
         <!--  ================ -->
         <section class="w-full flex flex-col items-center gap-6">
+            <SectionTitle title="Kontaktdaten" />
             TODO TGIS Kontaktdaten
             <!--
             {% include sectionTitle.html title="Kontaktdaten" %}
