@@ -1,9 +1,11 @@
 ---
 import Navbar from '../components/portfolio/Navbar.astro'
 import SectionTitle from '../components/portfolio/SectionTitle.astro'
+import ProjectPost from '../components/portfolio/ProjectPost.astro'
+
 import { getCollection, getEntry } from 'astro:content';
 
-const portfolioData = getCollection('projekte');
+const projectData = await getCollection('projects');
 ---
 
 <html lang="en">
@@ -61,6 +63,8 @@ const portfolioData = getCollection('projekte');
                 <SectionTitle title="Projekte" />
     
                 TODO TGIS PROJEKT
+                
+                { projectData.map(projectData => <ProjectPost project={projectData} />) }
     
                 <!--
                 {% include sectionTitle.html title="Projekte" %}

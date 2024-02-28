@@ -13,12 +13,13 @@ const lebenslauf = defineCollection({
     }),
 })
 
-const projekte = defineCollection({
+const projects = defineCollection({
     type: 'content', 
     schema: z.object({ 
+        creation_date: z.date(),
+        title: z.string(),
         card_image_url: z.string(),
         card_image_alt: z.string(), 
-        title: z.string(),
         tags: z.string(),
         demo_link: z.string().nullable(),
         github_link: z.string(),
@@ -26,7 +27,7 @@ const projekte = defineCollection({
 })
 
 // export the collections --> so we can use them in our astro files (type safe)
-export const collections = { lebenslauf, projekte }; 
+export const collections = { lebenslauf, projects }; 
 
 // alternative syntax to export collections:
 // export const collections = {
