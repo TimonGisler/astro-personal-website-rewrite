@@ -13,20 +13,20 @@ const lebenslauf = defineCollection({
     }),
 })
 
-// portfolio data
-const contacts = defineCollection({
-    type: 'data', // date = json or yaml type: 'content' = md
-    schema: z.object({ // schema is defined with zod (https://zod.dev/)
-        name: z.string(),
-        value: z.string(), // requre the field "Personalien" to exist and be a record of strings
-        card_link: z.string(),
-        image_url: z.string(),
-        alt_image_description: z.string(),
+const projekte = defineCollection({
+    type: 'content', 
+    schema: z.object({ 
+        card_image_url: z.string(),
+        card_image_alt: z.string(), 
+        title: z.string(),
+        tags: z.string(),
+        demo_link: z.string().nullable(),
+        github_link: z.string(),
     }),
 })
 
 // export the collections --> so we can use them in our astro files (type safe)
-export const collections = { lebenslauf, contacts }; 
+export const collections = { lebenslauf, projekte }; 
 
 // alternative syntax to export collections:
 // export const collections = {

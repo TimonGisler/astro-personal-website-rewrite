@@ -3,8 +3,8 @@ card_image_url: assets\img\projectPictures\Website.avif
 card_image_alt: Screenshot von dieser Webseite
 title:  Portfolio
 tags: tailwind jekyll
-github_link: https://github.com/
 demo_link: "#"
+github_link: https://github.com/
 ---
 
 I remade my portfolio website with Jekyll a static site generator and tailwind. Github pages is the webhost.
