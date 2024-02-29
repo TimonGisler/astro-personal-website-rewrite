@@ -14,7 +14,7 @@ infoAboutMe:
 
   aboutMeText: "Hallo und willkomen zu meiner persönlichen Webseite. Ich experimentiere gerne mit verschiedenen Technologien, wie zum Beispiel spring boot, react, jekyll, tailwind etc. etc. Auf dieser Webseite werde ich einige meiner Projekte online stellen."
 
-  profilePicture: assets/img/profile.avif
+  profilePictureUrl: /lebenslauf-image.png
 
 contacts:
    - 
@@ -39,22 +39,16 @@ contacts:
     alt_image_description: Mail
 
 education:
-  contacts:
-    - name: mail
-      value: timongisler@icloud.com
-      card_link: 'mailto:timongisler@icloud.com'
-      image_url: assets\img\contactPictures\mail.svg
-      alt_image_description: Mail
+  - time: 2008 - 2013
+    what_i_did: Primarschule
+  - time: 2013 - 2017
+    what_i_did: Sekundarschule
+  - time: 2017 - 2018
+    what_i_did: Bezirksschule
+  - time: 2018 - 2021
+    what_i_did: Informatikmittelschule
+  - time: 2021 - Heute
+    what_i_did: Bertschi
+    text: Nach der Informatikmittelschule fand ich ein Praktikum bei Bertschi als Java Software Engineer.
 
-    - name: github
-      value: '@TimonGisler'
-      card_link: 'https://github.com/TimonGisler'
-      image_url: assets\img\contactPictures\github.svg
-      alt_image_description: Mail
-      
-    - name: linkedIn
-      value: timongisler@icloud.com
-      card_link: 'https://ch.linkedin.com/in/timon-gisler-752068230/de'
-      image_url: assets\img\contactPictures\linkedIn.svg
-      alt_image_description: Mail
 

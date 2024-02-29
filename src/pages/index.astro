@@ -5,6 +5,9 @@ import ProjectPost from '../components/portfolio/ProjectPost.astro'
 
 import { getCollection, getEntry } from 'astro:content';
 
+//TODO TGIS, portfolio? probably about me info or smth else makes more sense
+// maybe it also makes sense to somehow merge it with the lebenslauf data
+const portfolioData = await getEntry('portfolio', 'portfolio')
 const projectData = await getCollection('projects');
 ---
 
@@ -27,7 +30,7 @@ const projectData = await getCollection('projects');
         <section class="w-full flex flex-col items-center gap-6 bg-gray-600">
             <!-- Avatar -->
             <img id="avatar" class="block w-36 h-36 rounded-full object-cover"
-            src="https://dub.sh/TH11c0k"
+            src={portfolioData.data.infoAboutMe.profilePictureUrl}
             alt="Avatar" />
         
             <!-- Title -->
@@ -38,12 +41,9 @@ const projectData = await getCollection('projects');
         
                 <div id="info-list" class="border-b-2 border-blue-700 pb-4 md:border-b-0 md:border-r-2">
                     <ul class="grid gap-x-5 gap-y-3 grid-cols-[min-content_1fr]">
-                        <!--
-                        {% for infoAboutMe in site.data.infoAboutMe.profile %}
-                            <p class="bg-blue-800 text-white w-fit h-fit px-1">{{infoAboutMe.infoName}}</p> <p class="break-all"> {{infoAboutMe.value}}</p>
-                        {% endfor %}
-                        -->
-                        <p class="bg-blue-800 text-white w-fit h-fit px-1">TODO TGIS</p> <p class="break-all"> TODO TGIS</p>
+                        {portfolioData.data.infoAboutMe.profile.map(infoAboutMe =>
+                          <p class="bg-blue-800 text-white w-fit h-fit px-1">{infoAboutMe.infoName}</p> <p class="break-all"> {infoAboutMe.value}</p>
+                         )}
                     </ul>
                 </div>
         

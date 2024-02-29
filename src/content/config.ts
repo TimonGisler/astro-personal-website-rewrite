@@ -13,6 +13,33 @@ const lebenslauf = defineCollection({
     }),
 })
 
+const portfolio = defineCollection({
+    type: 'data', 
+    schema: z.object({ 
+        infoAboutMe: z.object({
+            profile: z.array(z.object({
+                infoName: z.string(),
+                value: z.string(),
+            })),
+            aboutMeText: z.string(),
+            profilePictureUrl: z.string(),
+        }),
+        contacts: z.array(z.object({
+            name: z.string(),
+            value: z.string(),
+            card_link: z.string(),
+            image_url: z.string(),
+            alt_image_description: z.string(),
+        })),
+        education: z.array(z.object({
+            time: z.string(),
+            what_i_did: z.string(),
+            text: z.string().optional(),
+        })),
+
+    }),
+})
+
 const projects = defineCollection({
     type: 'content', 
     schema: z.object({ 
@@ -26,8 +53,10 @@ const projects = defineCollection({
     }),
 })
 
+
+
 // export the collections --> so we can use them in our astro files (type safe)
-export const collections = { lebenslauf, projects }; 
+export const collections = { lebenslauf, projects, portfolio }; 
 
 // alternative syntax to export collections:
 // export const collections = {
