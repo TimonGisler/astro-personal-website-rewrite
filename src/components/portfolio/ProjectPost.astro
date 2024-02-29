@@ -12,7 +12,7 @@ const { project } = Astro.props;
 
 
     <!-- Image -->
-    <!-- <img class="aspect-video w-80 rounded-t-2xl object-contain object-top" src={{include.image_url}} alt="{{include.image_alt}}"> -->
+    <img class="aspect-video w-80 rounded-t-2xl object-contain object-top" src={project.data.card_image_url} alt={project.data.card_image_alt}>
 
     <div class="p-6 pt-0 flex-grow">
         <p>Erstellt am: <span class="font-medium">{project.data.creation_date.toISOString().slice(0,10)}</span></p>

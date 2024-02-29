@@ -1,6 +1,6 @@
 ---
 creation_date: 2020-01-01
-card_image_url: assets\img\projectPictures\Encryptor.avif
+card_image_url: /project-images/Encryptor.avif
 card_image_alt: Encryptor
 title:  Encryptor
 tags: Javafx java

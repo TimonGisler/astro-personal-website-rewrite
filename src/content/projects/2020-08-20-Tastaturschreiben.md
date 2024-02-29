@@ -1,6 +1,6 @@
 ---
 creation_date: 2020-08-20
-card_image_url: assets\img\projectPictures\Tastaturschreiben.avif
+card_image_url: /project-images/Tastaturschreiben.avif
 card_image_alt: Screenshot von Tastaturschreiben Webseite
 title:  Tastaturschreiben
 tags: html javascript css
