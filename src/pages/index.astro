@@ -24,10 +24,12 @@ const projectData = await getCollection('projects');
     <body class="grid md:grid-cols-[13rem_1fr]">
         <Navbar />
         
-        
-        <!--   about me  -->
+        <!--  Main Content  -->
         <!--  ================ -->
-        <section class="w-full flex flex-col items-center gap-6 bg-gray-600">
+        <section class="w-full flex flex-col items-center gap-6 bg-">
+
+             <!--   about me  -->
+             <!--  ================ -->
             <!-- Avatar -->
             <img id="avatar" class="block w-36 h-36 rounded-full object-cover"
             src={portfolioData.data.infoAboutMe.profilePictureUrl}
