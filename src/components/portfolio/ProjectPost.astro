@@ -31,41 +31,6 @@ const { project } = Astro.props;
         </div>
     </div>
 
-    <!-- decide what happens on button click, if a link is provided open it in new tab, otherwise do nothing  -->
-    <!-- {% capture demo_onClick%}
-    {% if {{include.demo_link}}!=nil or {{include.demo_link}}!=""%}
-    "window.open('{{include.demo_link}}','_blank');"
-    {% else %}
-    ""
-    {% endif %}
-    {% endcapture %}
-
-    {% capture github_onClick %}
-    {% if {{include.github_link}}!=nil or {{include.github_link}}!=""%}
-    "window.open('{{include.github_link}}','_blank');"
-    {% else %}
-    ""
-    {% endif %}
-    {% endcapture %}
-
-    {% comment %} set button do disabled, if no link is provided for this button {% endcomment %}
-    {% if {{include.demo_link}} == null%}
-    {% assign demoDisabled = "disabled" %}
-    {% else %}
-    {% assign demoDisabled = "" %}
-    {% endif %}
-
-    {% if {{include.github_link}} == null%}
-    {% assign githubDisabled = "disabled" %}
-    {% else %}
-    {% assign githubDisabled = "" %}
-    {% endif %}
-
-    {% capture testid%}
-    "showDetailOfThisProject('{{include.project_detail_id}}')"
-    {% endcapture %}
--->
-
     <div id="buttons" class="flex justify-self-end">
         <!-- TODO TGIS, set disabled dynamically and add on click logic (open new tab with wherever user wants to go) -->
         <button disabled onclick=todoTgis class="disabled:brightness-75 disabled:cursor-default disabled:hover:bg-blue-800 cursor-pointer border-r -->
@@ -100,7 +65,7 @@ const { project } = Astro.props;
 </section>
 
 
-
+<!-- TODO TGIS, implement logic to show entire text -->
 <!-- <script>
     function showDetailOfThisProject(project_detail_id) {
         let detailOfThisProject = document.getElementById(project_detail_id);
