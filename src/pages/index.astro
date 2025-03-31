@@ -126,11 +126,17 @@ const projectData = await getCollection('projects');
             <!--  ================ -->
             <section class="w-full flex flex-col items-center gap-6">
                 <SectionTitle title="Kontaktdaten" />
-                TODO TGIS Kontaktdaten
+                <ul class="flex gap-8 flex-wrap justify-center">
+                    {portfolioData.data.contacts.map(contacts => (
+                        <a  href={contacts.card_link} target="_blank" class="flex items-center gap-4 justify-start card min-w-fit flex-1 w-0 hover:scale-105 duration-200">
+                        <img class="w-12 h-12" src={contacts.image_url} alt={contacts.alt_image_description} />
+                        <h1 id="contact_title">{contacts.value}</h1>
+                    </a>
+
+                    ))}
+                </ul>
                 <!--
-                {% include sectionTitle.html title="Kontaktdaten" %}
-            
-            
+                    
                 <ul class="flex gap-8 flex-wrap justify-center">
                     {% for contact in site.data.contacts %}
                     {% include contact.html card_link=contact.card_link image_url=contact.image_url alt_image_description=contact.alt_image_description
